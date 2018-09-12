@@ -28,7 +28,7 @@ Whole architecture for changing singing style transfer is shown below [1]
     <img src = "./image/Main_Architecture.JPG" width="60%">
 </p>
 
-## 2. Preprocess & Data
+## 2. Data
 
 First We downloaded songs from "Youtube" by using pytube library.(This might be illegal)
 
