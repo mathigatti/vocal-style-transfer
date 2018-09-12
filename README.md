@@ -95,7 +95,7 @@ Also we modified adversarial Loss functions, Discriminator and added hyper-param
 #### 3-2-1.  Generator & Discriminator Architectures
 
 <p>
-    <img src = "./image/GD_network.png" width="90%">
+    <img align="center" src = "./image/GD_network.png" width="60%">
 </p>
 
 
