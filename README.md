@@ -95,9 +95,11 @@ Also we modified adversarial Loss functions, Discriminator and added hyper-param
 
 #### 3-2-1.  Generator & Discriminator Architectures
 
-<p>
-    <img align="center" src = "./image/GD_network.png" width="60%">
+<p align="center">
+    <img src = "./image/GD_network.png" width="60%">
 </p>
+
+
 
 
 ####  3-2-2.  Loss Function
@@ -110,7 +112,7 @@ Also we modified adversarial Loss functions, Discriminator and added hyper-param
 where
 
 <p>
-    <img align="left" src = "./image/loss_function.png" width="60%">
+    <img align="left" src = "./image/loss_function.png" width="40%">
 </p>
 
 <br><br><br><br><br><br>
