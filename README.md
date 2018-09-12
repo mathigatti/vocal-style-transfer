@@ -107,4 +107,4 @@ code: https://github.com/Jeongseungwoo/Singing-Style-transfer
 [4] David Berthelot, et al. BEGAN: Boundary Equilibrium Generative Adversarial Networks. 2017.<br> paper:https://arxiv.org/pdf/1703.10717.pdf
 <br>code: https://github.com/carpedm20/BEGAN-tensorflow
 
-[5] CycleBE-VC code: https://github.com/NamSahng/SingingStyleTransfer
+[5] CycleBE-VocalConverter code: https://github.com/NamSahng/SingingStyleTransfer
