@@ -75,9 +75,10 @@ Data were downsampled to 16 kHz. For the sepearation normalized magnitude spectr
 
 Our separation model is shown below.
 
-<p>
-    <img align="center" src = "./image/deepunet.JPG" width="40%">
+<p align="center">
+    <img src = "./image/deepunet.JPG" width="60%">
 </p>
+
 
 <br>
 
