@@ -10,7 +10,7 @@ frame_period = 5.0 # extracted every 5 ms
 dataset_A = "./data/train/A"
 dataset_B = "./data/train/B"
 test_dir = "./data/test"
-direction = "A2B"
+direction = "A2B"   # or "B2A"
 
 log_dir = "./log"
 model_dir = "./model"
