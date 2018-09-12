@@ -49,7 +49,7 @@ GOAL: Transfer vocal's singing style
 
 Whole architecture for changing singing style transfer is shown below [1]
 
-<p align="left">
+<p align="center">
     <img src = "./image/Main_Architecture.JPG" width="60%">
 </p>
 
