@@ -1,6 +1,6 @@
 n_epochs = 2000 
 g_type = "gated_cnn"  # or "u_net"
-began = False  # True : Cycle-BeGan, False : CycleGan
+began = True  # True : Cycle-BeGan, False : CycleGan
 
 sr = 16000  # sampling rate
 n_features = 24 # Mceps coefficient 
