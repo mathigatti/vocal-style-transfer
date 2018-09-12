@@ -19,12 +19,11 @@
 - python==3.6.5
 
 ## Usage
-### 1. Training Separation Model 
+### Training Separation Model 
 If you have already seperate Song, then skip these step. <br>
 Before training, you need to prepare datasets in "./data". <br>
 we used CCMixter(50 songs : each consists mix, inst, vocal)<br>
 - Train
-
 <pre><code>
 $ python CCMixter_process.py
 $ python Training.py
