@@ -24,30 +24,24 @@ If you have already seperate Song, then skip these step. <br>
 Before training, you need to prepare datasets in "./data". <br>
 we used CCMixter(50 songs : each consists mix, inst, vocal)<br>
 - Train
-<pre><code>$ python CCMixter_process.py $ python Training.py </code></pre>
+<pre><code>$ python CCMixter_process.py 
+$ python Training.py </code></pre>
 
 - Test ("Singing-Voice-Separation/sample.wav")
 
-<pre><code>
-$ python Test.py
-</code></pre>
+<pre><code>$ python Test.py</code></pre>
 
-### 2. Training Style transfer Model  
+### Training Style transfer Model  
  - Train
  
 Preparing two Datasets and each must be located in "./data/train/A", "./data/train/B"
 
-<pre><code>
-$ python train.py
-</code></pre>
+<pre><code>$ python train.py</code></pre>
 
 - Test
 
 You can set direction and test_directory in config.py
-<pre><code>
-$ python test.py
-
-</code></pre>
+<pre><code>$ python test.py</code></pre>
 
 ## 1. Abstract
 
