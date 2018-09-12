@@ -67,7 +67,7 @@ As data for seperation you need separated data like "iKala, MedleyDB, DSD100". W
 
 Filnally we removed silence for the bigger receptive field on voices.
 
-Data were downsampled to 16 kHz. For the sepearation normalized magnitude spectrogram were used and for the transfer 24 Mel-cepstral coefficients (MCEPs) were used.[2][3]
+Data were downsampled to 16 kHz. For the separation normalized magnitude spectrogram were used and for the transfer 24 Mel-cepstral coefficients (MCEPs) were used.[2][3]
 
 ## Models
 
