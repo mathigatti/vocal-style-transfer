@@ -28,22 +28,6 @@ Whole architecture for changing singing style transfer is shown below [1]
     <img src = "./image/Main_Architecture.JPG" width="60%">
 </p>
 
-## Data
-
-First We downloaded songs from "Youtube" by using pytube library.(This might be illegal)
-
-- For the vocal data we downloaded Park Hyo Shin and BolBBalGan Sachungi's songs. (about 15 songs each)
-
-- Since our main model was used to convert voices, we tried "Yu Inna" and "Son Suk Hee"'s voice data. 
-
-For the separation of Singing Voice & Accompaniment we used deep U-net model.[2]
-
-As data for seperation you need separated data like "iKala, MedleyDB, DSD100". We used ccmixter data for training U-Net.
-
-Filnally we removed silence for the bigger receptive field on voices.
-
-Data were downsampled to 16 kHz. For the sepearation normalized magnitude spectrogram were used and for the transfer 24 Mel-cepstral coefficients (MCEPs) were used.[2][3]
-
 ## Usage
 ### Training Separation Model 
 If you have already seperate Song, then skip these step. <br>
