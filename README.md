@@ -18,6 +18,16 @@
 - tensorflow==1.9.0
 - python==3.6.5
 
+## Abstract
+
+GOAL: Transfer vocal's singing style
+
+Whole architecture for changing singing style transfer is shown below [1]
+
+<p align="center">
+    <img src = "./image/Main_Architecture.JPG" width="60%">
+</p>
+
 ## Data
 
 First We downloaded songs from "Youtube" by using pytube library.(This might be illegal)
@@ -59,19 +69,25 @@ Preparing two Datasets and each must be located in "./data/train/A", "./data/tra
 You can set direction and test_directory in config.py
 <pre><code>$ python test.py</code></pre>
 
-## 1. Abstract
+## Data
 
-GOAL: Transfer vocal's singing style
+First We downloaded songs from "Youtube" by using pytube library.(This might be illegal)
 
-Whole architecture for changing singing style transfer is shown below [1]
+- For the vocal data we downloaded Park Hyo Shin and BolBBalGan Sachungi's songs. (about 15 songs each)
 
-<p align="center">
-    <img src = "./image/Main_Architecture.JPG" width="60%">
-</p>
+- Since our main model was used to convert voices, we tried "Yu Inna" and "Son Suk Hee"'s voice data. 
 
-## 2. Models
+For the separation of Singing Voice & Accompaniment we used deep U-net model.[2]
 
-### 2-1 Deep U-Net for vocal separation
+As data for seperation you need separated data like "iKala, MedleyDB, DSD100". We used ccmixter data for training U-Net.
+
+Filnally we removed silence for the bigger receptive field on voices.
+
+Data were downsampled to 16 kHz. For the sepearation normalized magnitude spectrogram were used and for the transfer 24 Mel-cepstral coefficients (MCEPs) were used.[2][3]
+
+## Models
+
+### 1. Deep U-Net for vocal separation
 
 Our separation model is shown below.
 
@@ -83,7 +99,7 @@ Our separation model is shown below.
 <br>
 
 
-### 2-2 Cycle Consistency - Boundary Equilibrium GAN
+### 2. Cycle Consistency - Boundary Equilibrium GAN
 
 
 Since the singers we want to change don't sing same songs(Unpaired Data) we used Cycle-Gan for the transferring singing style.[1] Main model of Cycle-Gan is from "Cycle Gan Voice Converter".[3]
@@ -93,7 +109,7 @@ Due to the differeces between voice converting and transferring singing style we
 Also we modified adversarial Loss functions, Discriminator and added hyper-parameters to adjust BEGAN to cycle-gan for the stablizing training process. [1][4][5]
 
 
-#### 2-2-1.  Generator & Discriminator Architectures
+#### 2-1.  Generator & Discriminator Architectures
 
 <p align="center">
     <img src = "./image/GD_network.png" width="80%">
@@ -102,7 +118,7 @@ Also we modified adversarial Loss functions, Discriminator and added hyper-param
 
 
 
-####  2-2-2.  Loss Function
+#### 2-2.  Loss Function
 
 <p>
     <img align="left" src = "./image/loss_function_1.png" width="100%" height="40">
@@ -117,13 +133,13 @@ where
 
 <br><br><br><br><br><br>
 
-## 3. Future Work
+## Future Work
 
 More powerful separation for vocal separation.
 
 Embed more information such as lyrics and adjust Tacotron. ex) Tacotron GAN "https://github.com/tmulc18/S2SCycleGAN" 
 
-## 4. References
+## References
 
 [1] Cheng-Wei Wu, et al. Singing Style Transfer Using Cycle-Consistent Boundary Equilibrium Generative Adversarial Networks. 2018 <br> paper: https://arxiv.org/abs/1807.02254
 
