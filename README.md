@@ -5,7 +5,7 @@
 - [Hwang John](https://github.com/HwangJohn)
 - [Jeong Seung Woo](https://github.com/Jeongseungwoo)
 - [Nam Yoon Sahng](https://github.com/NamSahng)
-- [Choi Jiseok](https://github.com/chlwltjrtl)
+- [Choi Ji Seok](https://github.com/chlwltjrtl)
 - Jang Woo Jong
 - Lee Yu Jin
 - Jang Ji Chang
