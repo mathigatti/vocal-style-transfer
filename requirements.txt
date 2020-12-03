@@ -1,4 +1,4 @@
 librosa==0.6.2
 numpy==1.14.3
 tensorflow==1.9.0
-pyworld
+pyworld==0.2.4
