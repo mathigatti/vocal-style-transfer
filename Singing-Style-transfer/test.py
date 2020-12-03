@@ -19,7 +19,7 @@ def test(direction=direction, began = began ,model_dir=model_dir, test_dir=test_
     
     if began == True :
         model = CycleBeGAN(num_features=n_features,mode="test")
-        model.load(os.path.join(model_dir, "Cycle_BeGan")
+        model.load(os.path.join(model_dir, "Cycle_BeGan"))
     else :
         model = CycleGAN(num_features=n_features,mode="test")
         model.load(os.path.join(model_dir, "CycleGan"))
