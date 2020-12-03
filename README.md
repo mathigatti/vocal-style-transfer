@@ -1,46 +1,6 @@
 # vocal-style-transfer
 
-## Members
-
-- [Hwang John](https://github.com/HwangJohn)
-- [Jeong Seung Woo](https://github.com/Jeongseungwoo)
-- [Nam Yoon Sahng](https://github.com/NamSahng)
-- [Choi Ji Seok](https://github.com/chlwltjrtl)
-- Jang Woo Jong
-- Lee Yu Jin
-- Jang Ji Chang
-
-## Requirement
-
-- librosa==0.6.2
-- numpy==1.14.3
-- pyworld==0.2.4
-- tensorflow>=1.9.0
-- python==3.6.5
-
-## Abstract
-
-GOAL: Transfer vocal's singing style
-
-Whole architecture for changing singing style transfer is shown below [1]
-
-<p align="center">
-    <img src = "./image/Main_Architecture.JPG" width="60%">
-</p>
-
 ## Usage
-### Training Separation Model 
-If you have already seperate Song, then skip these step. <br>
-Before training, you need to prepare datasets in "./data". <br>
-we used CCMixter(50 songs : each consists mix, inst, vocal)<br>
-- Train
-<pre><code>$ python CCMixter_process.py 
-$ python Training.py </code></pre>
-
-- Test ("Singing-Voice-Separation/sample.wav")
-
-<pre><code>$ python Test.py</code></pre>
-
 ### Training Style transfer Model  
  - Train
  
@@ -71,20 +31,7 @@ Data were downsampled to 16 kHz. For the separation normalized magnitude spectro
 
 ## Models
 
-### 1. Deep U-Net for vocal separation
-
-Our separation model is shown below.
-
-<p align="center">
-    <img src = "./image/deepunet.JPG" width="60%">
-</p>
-
-
-<br>
-
-
-### 2. Cycle Consistency - Boundary Equilibrium GAN
-
+### Cycle Consistency - Boundary Equilibrium GAN
 
 Since the singers we want to change don't sing same songs(Unpaired Data) we used Cycle-Gan for the transferring singing style.[1] Main model of Cycle-Gan is from "Cycle Gan Voice Converter".[3]
 
@@ -93,16 +40,14 @@ Due to the differeces between voice converting and transferring singing style we
 Also we modified adversarial Loss functions, Discriminator and added hyper-parameters to adjust BEGAN to cycle-gan for the stablizing training process. [1][4][5]
 
 
-#### 2-1.  Generator & Discriminator Architectures
+#### Generator & Discriminator Architectures
 
 <p align="center">
     <img src = "./image/GD_network.png" width="80%">
 </p>
 
 
-
-
-#### 2-2.  Loss Function
+#### Loss Function
 
 <p>
     <img align="left" src = "./image/loss_function_1.png" width="100%" height="40">
@@ -118,8 +63,6 @@ where
 <br><br><br><br><br><br>
 
 ## Future Work
-
-More powerful separation for vocal separation.
 
 Embed more information such as lyrics and adjust Tacotron. ex) Tacotron GAN "https://github.com/tmulc18/S2SCycleGAN" 
 
